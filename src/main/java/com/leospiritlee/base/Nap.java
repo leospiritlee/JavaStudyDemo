@@ -2,22 +2,19 @@ package com.leospiritlee.base;
 
 /**
  * @Project: JavaStudyDemo
- * @ClassName TimedAbort
+ * @ClassName Nap
  * @description: TODO
  * @author: leospiritlee
- * @create: 2020-02-16 15:37
+ * @create: 2020-02-18 16:01
  **/
-public class TimedAbort {
+public class Nap {
 
-    private int sleepTime;
-
-    public TimedAbort(int sleepTime) {
-        this.sleepTime = sleepTime;
-
+    public Nap(int sleepTime) {
         try {
             Thread.sleep(sleepTime * 1000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
     }
 }
