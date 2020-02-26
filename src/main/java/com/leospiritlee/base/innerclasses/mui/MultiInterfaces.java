@@ -1,0 +1,40 @@
+package com.leospiritlee.base.innerclasses.mui;
+
+/**
+ * @Project: JavaStudyDemo
+ * @ClassName MultiInterfaces
+ * @description: TODO
+ * @author: leospiritlee
+ * @create: 2020-02-26 18:22
+ *
+ * 每个内部类都能独立地继承自一个（接口的）实现，
+ * 所以无论外围类是否已经继承了某个（接口的）实现，对于内部类都没有影响。
+ *
+ **/
+public class MultiInterfaces {
+
+    static void takesA(A a) {}
+    static void takesB(B b) {}
+    public static void main(String[] args) {
+        X x = new X();
+        Y y = new Y();
+        takesA(x);
+        takesA(y);
+        takesB(x);
+        takesB(y.makeB());
+    }
+
+}
+
+
+interface A {}
+interface B {}
+
+class X implements A, B {}
+
+class Y implements A {
+    B makeB() {
+        // Anonymous inner class:
+        return new B() {};
+    }
+}
