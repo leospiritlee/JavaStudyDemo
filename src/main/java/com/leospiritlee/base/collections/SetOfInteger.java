@@ -1,0 +1,24 @@
+package com.leospiritlee.base.collections;
+
+import java.util.HashSet;
+import java.util.Random;
+import java.util.Set;
+
+/**
+ * @Project: JavaStudyDemo
+ * @ClassName SetOfInteger
+ * @description: TODO
+ * @author: leospiritlee
+ * @create: 2020-03-02 10:25
+ **/
+public class SetOfInteger {
+
+    public static void main(String[] args) {
+        Random rand = new Random(47);
+        Set<Integer> intset = new HashSet<>();
+        for(int i = 0; i < 10000; i++)
+            intset.add(rand.nextInt(30));
+        System.out.println(intset);
+    }
+
+}
