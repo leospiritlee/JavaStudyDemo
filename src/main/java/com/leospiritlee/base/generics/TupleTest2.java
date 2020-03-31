@@ -23,7 +23,7 @@ public class TupleTest2 {
         return tuple(new Amphibian(), "hi", 47);
     }
 
-    static Tuple4<Vehicle, Amphibian, String, Integer> h() {
+    public static Tuple4<Vehicle, Amphibian, String, Integer> h() {
         return tuple(
                 new Vehicle(), new Amphibian(), "hi", 47);
     }
