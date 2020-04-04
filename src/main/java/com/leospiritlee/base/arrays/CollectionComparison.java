@@ -19,17 +19,12 @@ public class CollectionComparison {
 
 
 
-
-
-
-
-
-
     public static void main(String[] args) {
-        BerylliumSphere[] spheres =
-                new BerylliumSphere[10];
-        for(int i = 0; i < 5; i++)
+        BerylliumSphere[] spheres = new BerylliumSphere[10];
+        for(int i = 0; i < 5; i++){
             spheres[i] = new BerylliumSphere();
+        }
+
         show(spheres);
         System.out.println(spheres[4]);
 
